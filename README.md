@@ -12,39 +12,6 @@ This project aims to provide real-time wildfire data to the residents of British
     ```bash
         cd wildfire-watch-bc
     ```
-
-## Backend API Setup
-
-1. Navigate to the `wildfire-watch-bc-api` directory
-    ```bash
-        cd wildfire-watch-bc-api
-    ```
-2. Build the project with Gradle 
-    ```bash
-        ./gradlew build
-    ```
-3. Run the application
-    ```bash
-        ./gradlew bootRun --args='--server.port=8090'
-    ```
-The API will be available at `http://localhost:8090`.
-
-## Frontend Setup
-
-1. Navigate to the `wildfire-watch-bc-ui` directory
-    ```bash
-        cd ../wildfire-watch-bc-ui
-    ```
-2. Install Angular dependencies
-    ```bash
-        npm install
-    ```
-3. Serve the application
-    ```bash
-        ng serve --port 4200
-    ```
-The frontend will be accessible at `http://localhost:4200`.
-
 ## Docker Setup
 
 1. Navigate back to the root directory
