@@ -1,0 +1,4 @@
+ca/bc/gov/wildfirewatch/service/FirePointServiceTest.java
+ ca.bc.gov.wildfirewatch.service.FirePointServiceTest
+ca/bc/gov/wildfirewatch/controller/FirePointControllerTest.java
+ ca.bc.gov.wildfirewatch.controller.FirePointControllerTest

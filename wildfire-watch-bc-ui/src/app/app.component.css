@@ -1,0 +1,61 @@
+/* Define CSS variables for colors and spacing */
+:root {
+    --primary-color: #1565c0; /* BC government blue */
+    --button-color: #1565c0;
+    --button-hover-color: #0d47a1; /* Darker shade of blue */
+    --input-background: #f2f2f2;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+  }
+  
+  /* Styles for mat-toolbar */
+  mat-toolbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust as needed */
+    background-size: auto 80%; /* Adjust size as needed */
+  }
+  
+  /* Styles for mat-card */
+  .filters-card {
+    margin: 20px;
+    width: 300px; /* Adjust width as needed */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+  }
+  
+  /* Styles for mat-form-field and input elements */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Styles for button */
+  button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  /* Styles for Google Maps container */
+  .google-maps-container {
+    width: 100%;
+    height: 400px; /* Set the desired height */
+    margin-top: 20px;
+  }

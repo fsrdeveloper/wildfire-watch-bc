@@ -1,0 +1,79 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for Angular Material toolbar */
+mat-toolbar {
+  background-color: #1976d2; /* Adjust color as needed */
+  color: white;
+  padding: 0 20px;
+}
+/* Styles for Angular Material Card holding filters */
+.filters-card {
+  margin: 20px;
+  width: 300px; /* Adjust width as needed */
+}
+
+/* Styles for Angular Material Form Field and Input elements */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+button:hover {
+  background-color: #1565c0; /* Adjust hover color as needed */
+}
+
+/* Styles for the list of Google Maps and other information */
+.fire-point-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fire-point-item {
+  width: 100%;
+  max-width: 800px; /* Adjust max width as needed */
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Add borders for separation */
+  padding: 20px;
+}
+/* Styles for other information about the fire point */
+.fire-point-info {
+  margin-top: 10px;
+}
+
+.fire-point-info p {
+  margin: 5px 0;
+}
+
+.fire-point-info p strong {
+  font-weight: bold;
+}
+.filters-card {
+  margin: 20px;
+  width: 300px; /* Adjust width as needed */
+  margin-top: 50px; /* Adjust margin-top to move it down */
+}
+
+.container {
+  display: flex; 
+  width: 100%;
+  justify-content: center;
+}
+
+button {
+  background: #1976d2;
+  color: white;
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+
+.button-container {
+  padding: 12px 24px;
+}

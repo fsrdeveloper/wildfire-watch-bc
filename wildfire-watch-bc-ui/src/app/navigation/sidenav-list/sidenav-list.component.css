@@ -1,0 +1,10 @@
+.bc-government-branding {
+    background-color: #0074a2; /* BC Government's primary color */
+    color: #ffffff; /* White text color */
+    padding: 10px;
+}
+  
+.bc-government-branding img {
+    width: 150px; /* Adjust width as needed */
+    height: auto;
+}

@@ -1,0 +1,68 @@
+<!-- Angular Material toolbar -->
+<mat-toolbar color="primary">
+  Fire Points Dashboard
+</mat-toolbar>
+
+<div class="container">
+  <!-- Angular Material Card to hold filters -->
+  <mat-card class="filters-card" *ngIf="!isLoading">
+    <mat-card-header>
+      <mat-card-title>Filters</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- Input fields for filters -->
+      <mat-form-field appearance="fill">
+        <mat-label>Fire Status</mat-label>
+        <input matInput placeholder="Fire Status" [(ngModel)]="fireStatus">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Fire Cause</mat-label>
+        <input matInput placeholder="Fire Cause" [(ngModel)]="fireCause">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Geographic Description</mat-label>
+        <input matInput placeholder="Geographic Description" [(ngModel)]="geographicDescription">
+      </mat-form-field>
+      <!-- Button to apply filters -->
+      <div class="container">
+        <div class="button-container"><button (click)="applyFilters()">Apply Filters</button></div>
+        <div class="button-container"><button (click)="clear()">Clear</button></div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="container"  *ngIf="isLoading" >
+  <mat-progress-spinner diameter="100" mode="indeterminate"></mat-progress-spinner>
+</div>
+<!-- List of Google Maps and other information -->
+<div class="fire-point-list" *ngIf="!isLoading">
+  <!-- Iterate over the fire points and display maps and information -->
+  <div *ngFor="let firePoint of firePoints?.features" class="fire-point-item">
+    <!-- Angular Material Card to hold fire point information -->
+    <mat-card class="fire-point-card">
+          
+
+      <!-- Other information about the fire point -->
+      <div class="fire-point-info">
+        <p><strong>Fire Number:</strong> {{ firePoint.properties.FIRE_NUMBER }}</p>
+        <p><strong>Fire Year:</strong> {{ firePoint.properties.FIRE_YEAR }}</p>
+        <p><strong>Response Type Description:</strong> {{ firePoint.properties.RESPONSE_TYPE_DESC }}</p>
+        <p><strong>Ignition Date:</strong> {{ firePoint.properties.IGNITION_DATE }}</p>
+        <p><strong>Fire Out Date:</strong> {{ firePoint.properties.FIRE_OUT_DATE }}</p>
+        <p><strong>Fire Status:</strong> {{ firePoint.properties.FIRE_STATUS }}</p>
+        <p><strong>Fire Cause:</strong> {{ firePoint.properties.FIRE_CAUSE }}</p>
+        <p><strong>Fire Centre:</strong> {{ firePoint.properties.FIRE_CENTRE }}</p>
+        <p><strong>Zone:</strong> {{ firePoint.properties.ZONE }}</p>
+        <p><strong>Fire ID:</strong> {{ firePoint.properties.FIRE_ID }}</p>
+        <p><strong>Fire Type:</strong> {{ firePoint.properties.FIRE_TYPE }}</p>
+        <p><strong>Incident Name:</strong> {{ firePoint.properties.INCIDENT_NAME }}</p>
+        <p><strong>Geographic Description:</strong> {{ firePoint.properties.GEOGRAPHIC_DESCRIPTION }}</p>
+        <p><strong>Latitude:</strong> {{ firePoint.properties.LATITUDE }}</p>
+        <p><strong>Longitude:</strong> {{ firePoint.properties.LONGITUDE }}</p>
+        <p><strong>Fire URL:</strong> <a href="{{ firePoint.properties.FIRE_URL }}" target="_blank"> {{ firePoint.properties.FIRE_URL }}</a></p>
+        <!-- Add more information as needed -->
+      </div>
+    </mat-card>
+  </div>
+  <div *ngIf="!firePoints">No fire points available.</div>
+</div>
